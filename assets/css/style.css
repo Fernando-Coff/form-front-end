@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c0ce94d;
+}
+
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .212);
+}
+
+.left-form{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d08b61c;
+    padding: 1rem;
+}
+
+.img-left{
+    width: 34rem;
+}
+
+.rigth-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 3rem;
+}
+
+.form-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+}
+
+.login-button{
+    display: flex;
+    align-items: center;
+}
+
+.login-button button{
+    border: transparent;
+    background-color: #6c63ff;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.login-button button:hover{
+    background-color: #6b63fff1;
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 6rem;
+    height: 0.275rem;
+    background-color: #6c63ff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input{
+    margin: 0.6rem 0rem;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+    outline: 1.5px solid #6c63ff;
+}
+
+.input-box label,
+.gender-title h6{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder{
+    color: #000000be;
+}
+
+.gender-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.62rem;
+    padding: 0 0 .5rem;
+}
+
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input{
+    margin-right: 0.35rem;
+
+}
+
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 500;
+    color: #000000c0;
+}
+
+.continue-button button{ 
+    width: 100%;
+    margin-top: 1.5rem;
+    background-color: #6c63ff;
+    border: none;
+    padding: 0.62rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.continue-button button a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.continue-button button:hover{
+    background-color: #6b63fff1;
+}
+
+@media screen and (max-width: 1550px){
+    .left-form{
+        display: none;
+    }
+
+    .container{
+        width: 50%;   
+    }
+
+    .rigth-form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        width: 90%;
+        height: 90%;
+    }
+
+    .input-group{
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 25rem;
+        padding-right: 3rem;
+    }
+
+    .input-box input{
+        margin: 0.0rem 0rem;
+        padding: 0.8rem 0.8rem;
+        
+    }
+
+    .input-box label{
+        padding: 0.8rem 0.5rem;
+        
+    }
+}
+
+
+
+@media screen and (max-width: 500px){
+
+    
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 25rem;
+        padding-right: 3rem;
+    }
+
+    .gender-input{
+        margin-top: 1rem;
+    }
+    .gender-group{
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 0.1rem;
+    }
+}
